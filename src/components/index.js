@@ -1,3 +1,3 @@
 import Header from "./header"
-
-export { Header }
+import SearchArea from "./search_area"
+export { Header, SearchArea }
