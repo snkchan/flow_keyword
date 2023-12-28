@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import { color, fontSize, fontWeight } from "./themes/@index"
+import { color, fontSize, fontWeight } from "./themes"
 const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
