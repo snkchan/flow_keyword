@@ -1,9 +1,10 @@
-import { Header } from "./components"
+import { Header, SearchArea } from "./components"
 
 const App = () => {
   return (
     <>
       <Header />
+      <SearchArea />
     </>
   )
 }
