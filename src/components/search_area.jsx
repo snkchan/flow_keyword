@@ -1,16 +1,13 @@
 import styled from "styled-components"
 import { color, flexAlign, fontSize, fontWeight } from "../styles/themes"
 import SearchList from "./search_list"
-import UseDebounce from "../hooks/use_debounce"
 import useFetchKeywords from "../hooks/use_fetch_keywords"
+import debounce from "../utils/debounce"
 
 const SearchArea = () => {
   const { searchData, fetchSearchList } = useFetchKeywords()
-  const getInputText = UseDebounce(fetchSearchList, 500)
 
-  const onKeyUp = (e) => {
-    getInputText(e.target.value)
-  }
+  const fetchSearchListByInputText = debounce(fetchSearchList, 500)
 
   console.log(searchData)
 
@@ -18,7 +15,9 @@ const SearchArea = () => {
     <S.Div_MainWrap>
       <S.Div_FormWrap>
         <S.For_Form>
-          <S.Inp_Input onChange={onKeyUp} />
+          <S.Inp_Input
+            onChange={(e) => fetchSearchListByInputText(e.target.value)}
+          />
           <S.But_Button
             onClick={(e) => {
               e.preventDefault()
