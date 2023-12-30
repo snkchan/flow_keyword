@@ -21,7 +21,7 @@ const Div_MainWrap = styled.div`
 `
 const Img_LogoImg = styled.img`
   width: 5rem;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/1.05;
 `
 const H1_LogoTitle = styled.h1``
 
