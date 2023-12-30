@@ -25,17 +25,17 @@ const GlobalStyles = createGlobalStyle`
 
     h2 {
         font-size: ${fontSize.big};
-        font-weight: ${fontWeight.bold};
+        font-weight: ${fontWeight.extraLight};
     }
 
     h3 {
         font-size: ${fontSize.large};
-        font-weight: ${fontWeight.bold};
+        font-weight: ${fontWeight.medium};
     }
 
     h4 {
         font-size: ${fontSize.medium};
-        font-weight: ${fontWeight.bold};
+        font-weight: ${fontWeight.semiBold};
     }
 
     button {
